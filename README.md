@@ -6,6 +6,7 @@
 ## Steps
 
 1. Set up redux Toolkit
+2. Create Register Form
 
 ## Available Scripts
 
