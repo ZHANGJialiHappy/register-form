@@ -7,6 +7,9 @@
 
 1. Set up redux Toolkit
 2. Create Register Form
+3. Create Login Form
+4. Add React Router (todo)
+5. Add tailwind CSS (todo)
 
 ## Available Scripts
 
