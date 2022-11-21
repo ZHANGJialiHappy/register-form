@@ -10,8 +10,8 @@
 3. Create Login Form
 4. Add React Router 
 5. Add tailwind CSS
-6. Choose tailwind library (todo)
-7. Make register form (todo)
+6. Choose tailwind library - daisyUI
+7. Make register form
 
 ## Available Scripts
 

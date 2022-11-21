@@ -1,6 +1,5 @@
-import "../styles.css";
 import { useForm } from "react-hook-form";
-import {yupResolver} from "@hookform/resolvers/yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 export const Register = () => {
@@ -11,40 +10,47 @@ export const Register = () => {
         password: yup.string().min(6).max(20).required(),
     })
 
-    const {register, handleSubmit, formState: {errors}}= useForm({
+    const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
     });
 
     const onSubmit = (data: any) => {
-        console.log (data);
+        console.log(data);
     };
 
     return (
-        <div className = "formContainer">
-            <form className="form" onSubmit = {handleSubmit(onSubmit)}>
-                <div>
-                <label className="label"> Full Name</label>
-                <input className="input" type="text" placeholder="Full Name..." {...register("fullName")}/>
-                <p className="validationMessage">{errors.fullName?.message?.toString()}</p>
-                </div>
-                
-                <div>
-                <label className="label"> Email </label>
-                <input className="input" type="text" placeholder="Email..." {...register("email")}/>
-                <p className="validationMessage">{errors.email?.message?.toString()}</p>
-                </div>
+        <div className="m-5 flex flex-row justify-center">
+        <form className="card w-96 bg-base-100 shadow-xl gap-5 p-5" onSubmit={handleSubmit(onSubmit)}>
+            <div className="form-control">
+                <label className="input-group input-group-vertical">
+                    <span>Full Name</span>
+                    <input type="text" placeholder="Full Name..." className="input input-bordered" required {...register("fullName")} />
+                </label>
+                <p className="">{errors.fullName?.message?.toString()}</p>
+            </div>
 
-                <div>
-                <label className="label"> Password </label>
-                <input className="input" type="password" placeholder="Password..." {...register("password")}/>
-                <p className="validationMessage">{errors.password?.message?.toString()}</p>
-                </div>
-                
-                <div>
-                <input className="input" type="submit"/>
-                </div>
-            </form>
+            <div className="form-control">
+                <label className="input-group input-group-vertical">
+                    <span>Email</span>
+                    <input type="text" placeholder="info@site.com" 
+                    className={`input input-bordered ${errors.email?.message && "input-error"}`}  required {...register("email")} />
+                </label>
+                <p className="">{errors.email?.message?.toString()}</p>
+            </div>
+
+            <div className="form-control">
+                <label className="input-group input-group-vertical">
+                    <span>Password</span>
+                    <input type="password" placeholder="Password..." 
+                    className={`input input-bordered ${errors.password?.message && "input-error"}`} required {...register("password")} />
+                </label>
+                <p className="">{errors.password?.message?.toString()}</p>
+            </div>
+
+            <div className="flex justify-end">
+                <input className="btn" type="submit" />
+            </div>
+        </form>
         </div>
-
     )
 }
