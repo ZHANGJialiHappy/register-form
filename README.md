@@ -12,6 +12,8 @@
 5. Add tailwind CSS
 6. Choose tailwind library - daisyUI
 7. Make register form
+8. Make login form
+9. Make Navbar (todo)
 
 ## Available Scripts
 
