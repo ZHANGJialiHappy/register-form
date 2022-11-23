@@ -1,25 +1,30 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface RegisterState {
     userName: string;
     email: string;
     password: string;
-    confirmPassword: string;
 }
 
-const initialState: RegisterState = {
+const initialState = {
     userName: "",
     email: "",
     password: "",
-    confirmPassword: "",
-}
+};
 
 export const registerSlice = createSlice({
     name: "register",
     initialState,
-    reducers: {}
+    reducers: {
+        register: (state, action: PayloadAction<RegisterState>) => {
+            state.userName = action.payload.userName;
+            state.email = action.payload.email;
+            state.password = action.payload.password;
+        },
+    }
 })
 
+export const {register} = registerSlice.actions
 export default registerSlice.reducer
 
 

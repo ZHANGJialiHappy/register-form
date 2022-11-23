@@ -6,7 +6,7 @@ export const Login = () => {
 
     const schema = yup.object().shape({
         email: yup.string().email().required("required"),
-        password: yup.string().min(6).max(20).required(),
+        password: yup.string().required("required"),
     })
 
     const { register, handleSubmit, formState: { errors } } = useForm({

@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface LoginState {
     email: string;
@@ -13,7 +13,10 @@ const initialState: LoginState = {
 export const loginSlice = createSlice({
     name: "login",
     initialState,
-    reducers: {}
+    reducers: {
+        login: (state, action: PayloadAction<LoginState>) => {
+        }
+    }
 })
 
 export default loginSlice.reducer

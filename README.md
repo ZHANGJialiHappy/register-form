@@ -13,7 +13,8 @@
 6. Choose tailwind library - daisyUI
 7. Make register form
 8. Make login form
-9. Make Navbar (todo)
+9. Make Navbar
+10. 
 
 ## Available Scripts
 
