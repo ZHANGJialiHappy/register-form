@@ -12,12 +12,12 @@ function App() {
       <Router>
         <Navbar/>
         <Routes>
+          <Route path="/register-form/" element={<Register/>}/>
           <Route path="/register-form/register" element={<Register/>}/>
           <Route path="/register-form/login" element={<Login/>}/>
           <Route path="/register-form/home" element={<Home/>}/>
         </Routes>
       </Router>
-      <h1 className="text-center">Welcome to my application!</h1>
     </div>
   );
 }
