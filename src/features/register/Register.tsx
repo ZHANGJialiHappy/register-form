@@ -25,7 +25,7 @@ export const Register = () => {
 
     const onSubmit = (data: FieldValues ) => {
         dispatch(save(data as RegisterState));
-        navigate("/login");
+        navigate("/register-form/login");
     }
 
     return (
