@@ -3,10 +3,12 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useDispatch } from "react-redux";
 import {register as save, RegisterState} from "./registerSlice";
+import { useNavigate } from "react-router-dom";
 
 
 export const Register = () => { 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const schema = yup.object().shape({
         userName: yup.string().required("required"),
@@ -23,6 +25,7 @@ export const Register = () => {
 
     const onSubmit = (data: FieldValues ) => {
         dispatch(save(data as RegisterState));
+        navigate("/login");
     }
 
     return (
