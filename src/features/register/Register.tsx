@@ -5,16 +5,16 @@ import { useDispatch } from "react-redux";
 import {register as save, RegisterState} from "./registerSlice";
 
 
-export const Register = () => {
+export const Register = () => { 
     const dispatch = useDispatch();
 
     const schema = yup.object().shape({
         userName: yup.string().required("required"),
         email: yup.string().email().required("required"),
-        password: yup.string().min(6).max(20).required(),
+        password: yup.string().min(6).max(20).required("required"),
         confirmPassword: yup.string()
         .oneOf([yup.ref("password"), null], "Password don't match.")
-        .required(),
+        .required("required"),
     })
 
     const { register, handleSubmit, formState: { errors } } = useForm({

@@ -14,7 +14,8 @@
 7. Make register form
 8. Make login form
 9. Make Navbar
-10. 
+10.Make reduce in register slice
+11.Compare data in login form
 
 ## Available Scripts
 
