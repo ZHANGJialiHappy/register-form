@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { RootState } from "../../app/store";
 
 export interface RegisterState {
     userName: string;
@@ -24,7 +25,9 @@ export const registerSlice = createSlice({
     }
 })
 
-export const {register} = registerSlice.actions
-export default registerSlice.reducer
+export const getUser=(state: RootState) => state.register; 
+export const {register} = registerSlice.actions;
+export default registerSlice.reducer;
+
 
 

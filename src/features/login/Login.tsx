@@ -2,10 +2,10 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { RootState } from "../../app/store";
+import { getUser } from "../register/registerSlice";
 
 export const Login = () => {
-    const user = useSelector((state: RootState) => state.register)
+    const user = useSelector(getUser);
     const [errorMessage, setErrorMessage] = useState("")
     const navigate=useNavigate();
 
