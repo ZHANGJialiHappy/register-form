@@ -17,6 +17,7 @@ function App() {
           <Route path="/register-form/home" element={<Home/>}/>
         </Routes>
       </Router>
+      <h1 className="text-center">Welcome to my application!</h1>
     </div>
   );
 }
