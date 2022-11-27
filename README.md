@@ -9,7 +9,7 @@
 7. yup
 
 ## demo
-Check my application on [`gh-pages`](https://zhangjialihappy.github.io/register-system/).
+Check my application on [`gh-pages`](https://zhangjialihappy.github.io/register-form/).
 
 ## Steps
 

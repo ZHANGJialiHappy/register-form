@@ -22,7 +22,7 @@ export const Login = () => {
             return;
         }
          else
-         navigate("/register-system/home");
+         navigate("/register-form/home");
     };
 
     return (
