@@ -5,11 +5,11 @@ export const Navbar = () => {
         <div>
             <div className="navbar bg-base-100 justify-end">
 
-            <Link className="btn btn-ghost normal-case text-xl" to="/register-form/register">
+            <Link className="btn btn-ghost normal-case text-xl" to="/register-system/register">
             Register Form
             </Link>
 
-            <Link className="btn btn-ghost normal-case text-xl" to="/register-form/login">
+            <Link className="btn btn-ghost normal-case text-xl" to="/register-system/login">
             Login Form
             </Link>
 

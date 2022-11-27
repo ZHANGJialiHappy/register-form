@@ -12,10 +12,10 @@ function App() {
       <Router>
         <Navbar/>
         <Routes>
-          <Route path="/register-form/" element={<Register/>}/>
-          <Route path="/register-form/register" element={<Register/>}/>
-          <Route path="/register-form/login" element={<Login/>}/>
-          <Route path="/register-form/home" element={<Home/>}/>
+          <Route path="/register-system/" element={<Register/>}/>
+          <Route path="/register-system/register" element={<Register/>}/>
+          <Route path="/register-system/login" element={<Login/>}/>
+          <Route path="/register-system/home" element={<Home/>}/>
         </Routes>
       </Router>
     </div>
