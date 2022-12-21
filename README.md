@@ -10,6 +10,7 @@
 
 ## demo
 Check my application on [`gh-pages`](https://zhangjialihappy.github.io/register-form/).
+![](registerForm.gif)
 
 ## Steps
 
