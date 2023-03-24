@@ -1,4 +1,4 @@
-## stack
+## Stack
 
 1. TypeScript
 2. Redux Toolkit
@@ -8,7 +8,8 @@
 6. react-hook-form
 7. yup
 
-## demo
+## Demo
+
 Check my application on [`gh-pages`](https://zhangjialihappy.github.io/register-form/).
 ![](registerForm.gif)
 
